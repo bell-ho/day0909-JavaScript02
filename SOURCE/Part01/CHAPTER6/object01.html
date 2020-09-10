@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var ob = { //객체생성 다양한 자료형 가능
+            num: 2,
+            string: "rrrr",
+            boolean: true,
+            array: [1, 2, 3, 4],
+            method: function () {
+
+            }
+        }
+
+        var person = {
+            name: "ddd",
+            eat: function (food) {
+                alert(this.name + "이" +food+ " 먹는중");
+            }
+        };
+        person.eat('사과');
+
+        var output = "";
+        for(var key in ob){
+            output += "ㅁ"+key+": "+ob[key]+"\n";
+        }
+        alert(output);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

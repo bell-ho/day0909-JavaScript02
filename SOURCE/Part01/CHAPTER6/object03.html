@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var st = {};
+        st.이름 = "ㅇㅇㅇ";
+        st.취미 = "악기";
+
+        st.toString = function(){
+            var output = '';
+            for(var key in this){
+
+                // toString 메서드는 출력안되게함
+                if(key !='toString'){
+                    output += key + "\t" + this[key] + '\n';
+                }
+            }
+            return output;
+        };
+
+        alert(st.toString());
+        
+        // 속성을제거함
+        delete(st.취미);
+        alert(st);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
