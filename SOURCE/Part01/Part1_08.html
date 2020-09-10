@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        var hour = date.getHours();
+
+        if(hour <= 12){
+            document.write("오전");
+        }else {
+            document.write("오후");
+        }
+        document.write("<br>");
+
+        if(hour <= 11){
+            document.write("아침");
+        }else{
+            if(hour <= 15){
+                document.write("점심");
+            }else{
+                document.write("저녁");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
