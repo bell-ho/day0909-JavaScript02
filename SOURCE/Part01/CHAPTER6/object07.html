@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(name){
+            this.name = name;
+        }
+        var student = new Student('ddd'); //생성자 함수를 이용해 만들어진 객체를 인스턴스라고함
+                                          //해당 객체가 어떤 함수를 통해 생성됐는지 확인 할때 instanceof 키워드를 사용
+
+        alert(student instanceof Student);
+        alert(student instanceof Number);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

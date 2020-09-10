@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Student(name, kor, math, eng, sci) {
+        this.이름 = name;
+        this.국어 = kor;
+        this.수학 = math;
+        this.영어 = eng;
+        this.과학 = sci;
+
+        this.getSum = function () {
+          return this.국어 + this.수학 + this.영어 + this.과학;
+        };
+
+        this.getAvg = function(){
+            return this.getSum() / 4;
+        };
+
+        this.toString = function(){
+            return this.이름 +'\t'+this.getSum()+'\t'+this.getAvg();
+        }
+
+      }
+
+      Student.prototype.getSum = function(){
+
+      }
+      Student.prototype.getAvg = function(){
+
+      }
+      Student.prototype.toString = function(){
+        
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
