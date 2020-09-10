@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        
+        var st = [];
+        st.push({ 이름: "ㅂ", 국어: 27 });
+        st.push({ 이름: "ㅇ", 국어: 87 });
+        st.push({ 이름: "ㄴ", 국어: 17 });
+        st.push({ 이름: "ㅁ", 국어: 47 });
+        st.push({ 이름: "ㅋ", 국어: 57 });
+        st.push({ 이름: "ㅊ", 국어: 67 });
+        st.push({ 이름: "ㅍ", 국어: 77 });
+        st.push({ 이름: "ㅠ", 국어: 87 });
+        st.push({ 이름: "ㅓ", 국어: 97 });
+        st.push({ 이름: "ㅛ", 국어: 37 });
+
+        for(var i in st){
+            st[i].getSum = function(){
+                return this.국어
+            };
+        };
+
+        var output = '이름\t총점\n';
+
+        for(var i in st){
+            with(st[i]){
+                output += 이름 + '\t' + getSum() +'\n';
+            }
+        }
+        document.write(output);
+        alert(output);
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
