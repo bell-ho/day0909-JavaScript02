@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var buttona = document.getElementById('button_a');
+            var buttonb = document.getElementById('button_b');
+            var countera = document.getElementById('counter_a');
+            var counterb = document.getElementById('counter_b');
+
+            buttona.onclick = function(){
+                countera.innerHTML = Number(countera.innerHTML)+1;
+            };
+            buttonb.onclick = function(){
+                counterb.innerHTML = Number(counterb.innerHTML)+1;
+            };
+            buttonb.onclick = function(){
+                counterb.innerHTML = Number(counterb.innerHTML)+1;
+                countera.innerHTML = Number(countera.innerHTML)+1;
+            }
+            buttonb.onclick = function(){
+                counterb.innerHTML = Number(counterb.innerHTML)+1
+                buttona.onclick();
+            }
+        };
+    </script>
+</head>
+<body>
+    <button id="button_a">버튼1</button>
+    <button id="button_b">버튼2</button>
+    <h1>Button A - <span id ="counter_a"></span></h1>
+    <h1>Button b - <span id ="counter_b"></span></h1>
+</body>
+</html>

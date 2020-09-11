@@ -7,16 +7,11 @@
     <title>Document</title>
     <script>
         window.onload = function () {
-            //변수 선언
-            var header = document.getElementById('header');
-
-            //이벤트 연결
-            function whenClick() {
-                alert('click');
+            document.getElementById('header').onclick = function () {
+                this.style.color = 'Orange';
+                this.style.backgroundColor = 'Red';
             };
-
-            header.onclick = whenClick;
-        }
+        };
     </script>
 </head>
 

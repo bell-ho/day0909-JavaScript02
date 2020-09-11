@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload =  function(){
+            document.getElementById('my_form').onsubmit = function(){
+                //변수 선언
+                var pass = document.getElementById('pass').value;
+                var pass_check = document.getElementById('pass_check').value;
+
+                if(pass == pass_check){
+                    alert('성공');
+                }else{
+                    alert('다시입력');
+                }
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="my_form">
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="pass">비밀번호</label>
+        <input type="password" name="pass" id="pass"><br>
+
+        <label for="pass_check">비밀번호확인</label>
+        <input type="password" id="pass_check"><br>
+
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
