@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      var xml = '';
+      xml +='<friends>';
+      xml +='   <friend>';
+      xml +='       <name>이종호</name>';
+      xml +='       <language>Ruby</language>';
+      xml +='   </friend>';
+      xml +='   <friend>';
+      xml +='       <name>이종호2</name>';
+      xml +='       <language>자바</language>';
+      xml +='   </friend>';
+      xml +='   <friend>';
+      xml +='       <name>이종호3</name>';
+      xml +='       <language>자바스크립트</language>';
+      xml +='   </friend>';
+      xml +='</friends>';
+
+      $(document).ready(function(){
+        var xmlDoc = $.parseXML(xml);
+        $(xmlDoc).find('friend').each(function(i){
+          var output = '';
+          output += '<div>';
+          output += '   <h1>'+$(this).find('name').text()+'</h1>';
+          output += '   <p>'+$(this).find('language').text()+'</p>';
+          output += '</div>';
+
+          document.body.innerHTML += output;
+        })
+      })
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

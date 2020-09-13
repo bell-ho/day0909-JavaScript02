@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("img").css("width", 250);
+
+        //함수를 0.5초마다 실행 움직이는 그림만들기
+        setInterval(function () { 
+          //img태그중 첫번째 문서객체를 body태그의 뒷부분으로 이동시킴
+          $("img").first().appendTo("body");
+        },500);
+      });
+    </script>
+  </head>
+  <body>
+    <img src="a.jpg" alt="가" />
+    <img src="b.jpg" alt="나" />
+    <img src="c.jpg" alt="다" />
+    <img src="d.jpg" alt="리" />
+    <img src="e.jpg" alt="마" />
+    <img src="f.jpg" alt="바" />
+  </body>
+</html>

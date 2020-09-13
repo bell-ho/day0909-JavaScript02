@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').eq(0).css('background','orange');   //특정 위치에 있는 문서 객체를 선택
+            $('h1').eq(-1).css('background','orange');  //음수를 입력하면 뒤쪽을 기준으로 선택 -1은 맨뒤 -2는 그 전
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Header-0</h1>
+        <h1>Header-1</h1>
+        <h1>Header-2</h1>
+    </div>
+</body>
+</html>

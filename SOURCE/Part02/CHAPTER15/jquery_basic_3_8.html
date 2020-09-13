@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var html = $('h1').html(); //문서 객체 내부의 글자와 관련된 모든 기능을 수행한다 (html태그 인식)
+        var text = $('h1').text(); //문서 객체 내부의 글자와 관련된 모든 기능을 수행한다
+
+        alert(html); //첫번째 문서 객체 내용만 가져옴
+
+        alert(text);  //선택자로 선택한 *모든* 문서 객체의 글자를 가져옴
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+  </body>
+</html>
