@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var ob = {};
+        // ob.name = 'a'; //<=== 이방법은 소스가 복잡해짐
+        // ob.gender = 'male';
+        // ob.part = '기타';
+
+        $.extend(ob, { //<===extend로 확장
+          gender: "male",
+          part: "기타",
+        });
+
+        var output = "";
+        $.each(ob, function (key, item) {
+          output += key + ": " + item + "<br>";
+        });
+        document.write(output);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

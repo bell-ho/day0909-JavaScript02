@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //변수 선언
+        var array = [
+          { name: "a", link: "http://hanb.co.kr" },
+          { name: "b", link: "http://naver.com" },
+          { name: "c", link: "http://hanb.co.kr" },
+          { name: "d", link: "http://daum.net" },
+        ];
+
+        //$.each() 메서드를 사용
+        $.each(array, function (i, o) {
+            console.log(o)
+        });
+
+        $.each(array, function (i, o) {
+            var output = '';
+            output += '<a href="'+o.link+'">';
+            output += ' <h1>'+o.name+'</h1>';
+            output += '</a>'
+
+            document.body.innerHTML += output;
+
+            console.log(o.link);
+            console.log(o.name);
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

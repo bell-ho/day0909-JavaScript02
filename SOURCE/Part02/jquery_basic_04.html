@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('#target').css('color','red');
+        })
+        $(document).ready(function(){
+            $('h1#target').css('color','red'); //h1태그중 id속성이 target인 문서객체 선택
+        })
+
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1 id="target">header-1</h1>
+    <h1>Header-2</h1>
+</body>
+</html>

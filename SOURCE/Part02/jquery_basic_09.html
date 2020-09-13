@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           //5초후에 코드를 실행
+
+           setTimeout(function(){
+               //변수 선언
+               var value = $('select > option:selected').val(); //select의 자식중 option이 selected된
+
+               alert(value)
+           },3000);
+       })
+    </script>
+</head>
+<body>
+   <select name="" id="">
+       <option value="사과벨류">사과</option>
+       <option value="가방벨류">가방</option>
+       <option value="개벨류">개</option>
+       <option value="고양이벨류">고양이</option>
+   </select>
+</body>
+</html>
