@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script>
+        $(document).ready(function () {
+
+            $('div').click(function () {
+                var header = $('h1', this).text();
+                var paragraph = $('p', this).text();
+
+                document.write(header + '<br>' + paragraph);
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            margin: 5px;
+            padding: 3px;
+
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>헤더 1</h1>
+        <p>paragraph(문단)</p>
+    </div>
+    <div>
+        <h1>헤더 2</h1>
+        <p>paragraph(문단)</p>
+    </div>
+    <div>
+        <h1>헤더 3</h1>
+        <p>paragraph(문단)</p>
+    </div>
+</body>
+
+</html>

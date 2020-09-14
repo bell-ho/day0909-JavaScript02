@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+
+            $(canvas).toggle(function(e){
+                var position = $(this).offset();
+                var x = e.pageX - position.left;
+                var y = e.pageY - position.top;
+
+                context.beginPath();
+                context.move(x,y);
+            },function(e){
+                var position = $(this).offset();
+                var x = e.pageX - position.left;
+                var y = e.pageY - position.top;
+
+                context.line(x,y);
+                context.stroke();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

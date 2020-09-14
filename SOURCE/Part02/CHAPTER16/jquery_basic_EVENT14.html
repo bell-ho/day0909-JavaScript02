@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#all_check').change(function(){  //type 속성이 checkbox와 radio인 input태그의 상태를 변경하는 이벤트는 click이 아니라 change이다
+                if(this.checked){
+                    $('#check_item').children().attr('checked',true);
+                }else{
+                    $('#check_item').children().attr('checked',false);
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+</body>
+    <input type="checkbox" id="all_check">
+    <label for="">All</label>
+
+    <div id="check_item">
+        <input type="checkbox">
+        <label for="">A option</label>
+        <input type="checkbox">
+        <label for="">B option</label>
+        <input type="checkbox">
+        <label for="">C option</label>
+    </div>
+</html>

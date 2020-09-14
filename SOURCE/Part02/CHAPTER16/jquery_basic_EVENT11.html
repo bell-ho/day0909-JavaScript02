@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('textarea').keyup(function () { //keyup 키보드가 떼어질때 발생함
+                //남은 글자 수를 구한다
+                var inputLength = $(this).val().length;
+                var remain = 150 - inputLength;
+
+                $('h1').html(remain);
+
+                if (remain >= 0) {
+                    $('h1').css('color', 'black');
+                } else {
+                    $('h1').css('color', 'red');
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>지금 내생각</p>
+        <h1>150</h1>
+        <textarea name="" id="" cols=70" rows=5></textarea>
+    </div>
+</body>
+
+</html>

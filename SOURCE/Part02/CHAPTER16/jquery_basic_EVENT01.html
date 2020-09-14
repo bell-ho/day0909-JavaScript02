@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //이벤트 연결
+            $('h1').bind('click', function () { //bind()메서드의 첫 번째 매개 변수에 이벤트 이름을 입력하고 두번째 매개변수에 이벤트 핸들러를 입력
+                $(this).html(function (i, o) { //this는 이벤트가 발생한 객체
+                    return o + '+';
+                });
+            });
+
+            $('h1').bind({
+                mouseenter:function(){
+                    $(this).addClass('reverse');
+                },
+                mouseleave:function(){
+                    $(this).removeClass('reverse');
+                }
+            });
+        });
+    </script>
+    <style>
+        .reverse{
+            background: black;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>헤더-0</h1>
+    <h1>헤더-1</h1>
+    <h1>헤더-2</h1>
+</body>
+
+</html>

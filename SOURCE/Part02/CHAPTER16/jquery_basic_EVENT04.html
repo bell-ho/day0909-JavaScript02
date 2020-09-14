@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script>
+        $(document).ready(function () {
+
+            $('h1').hover(function () {
+                $(this).addClass('reverse');
+            }, function () {
+                $(this).removeClass('reverse');
+            });
+
+            $('h1').toggle(function () {
+                $(this).html(function (i, o) {
+                    return 'ㅁ' + o;
+                });
+            }, function () {
+                $(this).html(function (i, o) {
+                    return o + 'ㅁ'
+                });
+            }, function () {
+                $(this).html(function (i, o) {
+                    return o.substring(1, o, length - 1)
+                });
+            });
+
+        });
+    </script>
+    <style>
+        .reverse {
+            background: black;
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>헤더-0</h1>
+    <h1>헤더-1</h1>
+    <h1>헤더-2</h1>
+</body>
+
+</html>

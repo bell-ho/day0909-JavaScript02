@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //스크롤 이벤트 발생시
+            $(window).scroll(function () {
+                //필요한 변수 구하기
+                var scrollHeight = $(window).scrollTop() + $(window).height();
+                var documentHeight = $(document).height();  //document 객체의 height속성은 문서전체의 높이를 의미한다
+                //스크롤이 끝까지 내려가면 window객체의 scrollTop속성과 height속성을 합한 값이 document객체의 높이와 같아진다
+
+                //스크롤의 높이와 문서의 높이가 같을때 +200은 스마트폰의 오차범위용
+                if (scrollHeight + 200 >= documentHeight) {
+                    for (var i = 0; i < 10; i++) {
+                        $('<h1>무한 스크롤</h1>').appendTo('body');
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            for (var i = 0; i < 20; i++) {
+                $('<h1>무한 스크롤</h1>').appendTo('body');
+            }
+        })
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
