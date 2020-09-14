@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+		//XMLHttpRequest 객체를 생성
+		var request = createRequest();
+        request.open('get','/home/MyFirstStringAction',false);
+        
+        //send() 메서드에 소비되는 시간 측정
+        var preDate = new Date();
+        request.send();
+        var nowDate = new Date();
+        //출력
+        document.write(nowDate-preDate);
+	}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
